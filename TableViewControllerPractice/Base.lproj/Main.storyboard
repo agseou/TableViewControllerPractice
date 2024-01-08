@@ -200,11 +200,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="b3R-me-E5L">
-                            <rect key="frame" x="0.0" y="0.0" width="393" height="93"/>
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="140"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z1A-yM-LYM">
-                                    <rect key="frame" x="10" y="8" width="373" height="79"/>
+                                    <rect key="frame" x="10" y="51" width="373" height="79"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fo4-yv-YK3">
                                             <rect key="frame" x="278" y="22" width="75" height="35"/>
@@ -240,18 +240,26 @@
                                         <constraint firstItem="iOF-rT-UWB" firstAttribute="top" secondItem="Z1A-yM-LYM" secondAttribute="top" constant="22" id="rzW-w8-6dS"/>
                                     </constraints>
                                 </view>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="쇼핑" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mMT-qf-ZUi">
+                                    <rect key="frame" x="181.66666666666666" y="10" width="30" height="21"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
                                 <constraint firstItem="Z1A-yM-LYM" firstAttribute="leading" secondItem="b3R-me-E5L" secondAttribute="leading" constant="10" id="64N-ll-Awd"/>
                                 <constraint firstItem="Z1A-yM-LYM" firstAttribute="centerX" secondItem="b3R-me-E5L" secondAttribute="centerX" id="ARS-nx-aBs"/>
-                                <constraint firstItem="Z1A-yM-LYM" firstAttribute="top" secondItem="b3R-me-E5L" secondAttribute="top" constant="8" id="KLn-J9-8lt"/>
+                                <constraint firstItem="Z1A-yM-LYM" firstAttribute="top" secondItem="mMT-qf-ZUi" secondAttribute="bottom" constant="20" id="KmN-2y-eFq"/>
+                                <constraint firstItem="mMT-qf-ZUi" firstAttribute="top" secondItem="b3R-me-E5L" secondAttribute="top" constant="10" id="ZHv-Zs-NsD"/>
+                                <constraint firstItem="mMT-qf-ZUi" firstAttribute="centerX" secondItem="b3R-me-E5L" secondAttribute="centerX" id="Zb1-rg-rrD"/>
                                 <constraint firstAttribute="trailing" secondItem="Z1A-yM-LYM" secondAttribute="trailing" constant="10" id="tfn-oT-aUs"/>
                             </constraints>
                         </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ShoppingTableViewCell" rowHeight="63" id="86f-W0-XNE" customClass="ShoppingTableViewCell" customModule="TableViewControllerPractice" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="143" width="393" height="63"/>
+                                <rect key="frame" x="0.0" y="190" width="393" height="63"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="86f-W0-XNE" id="Lty-ar-tGE">
                                     <rect key="frame" x="0.0" y="0.0" width="393" height="63"/>
