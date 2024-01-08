@@ -15,7 +15,4 @@ class ShoppingTableViewCell: UITableViewCell {
     @IBOutlet var bookmark: UIButton!
     @IBOutlet var shoppingBox: UIView!
     
-    var isBookmarked: Bool = false
-    var isChecked: Bool = false
-    
 }
