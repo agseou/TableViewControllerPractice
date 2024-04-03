@@ -88,7 +88,7 @@ class ShoppingTableViewController: UITableViewController {
         items
             .bind(to: tableView.rx.items(cellIdentifier: "ShoppingTableViewCell", cellType: ShoppingTableViewCell.self)) { (row, element, cell) in
                 
-                cell.ShoppingLabel.text = element.label
+                cell.configure(item: element)
                 cell.shoppingBox.backgroundColor = .systemGray6
                 cell.shoppingBox.layer.cornerRadius = 15
                 cell.configure(item: element)
@@ -96,20 +96,18 @@ class ShoppingTableViewController: UITableViewController {
                 //IBAction -> RX로
                 cell.checkBox.rx.tap
                     .bind(with: self) { owner, _ in
-                        //element.isChecked.toggle()
+                        owner.list[row].isChecked.toggle()
+                        owner.items.onNext(owner.list)
+                        cell.configure(item: element)
                     }
                     .disposed(by: cell.disposeBag)
                 cell.bookmark.rx.tap
                     .bind(with: self) { owner, _ in
-                        // element.isChecked.toggle()
+                        owner.list[row].isBookmark.toggle()
+                        owner.items.onNext(owner.list)
+                        cell.configure(item: element)
                     }
                     .disposed(by: cell.disposeBag)
-                
-                //체크박스
-                cell.checkBox.setImage(UIImage(systemName: element.isChecked ? "checkmark.square.fill" : "checkmark.square"), for: .normal)
-                
-                // 북마크
-                cell.bookmark.setImage(UIImage(systemName: element.isBookmark ? "star.fill" : "star"), for: .normal)
             }
             .disposed(by: disposeBag)
         
