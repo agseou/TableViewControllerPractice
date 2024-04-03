@@ -7,7 +7,7 @@
 
 import UIKit
 
-class Case2TableViewController: UITableViewController {
+class SettingTableViewController: UITableViewController {
 
     let settingList: [[String]] = [["공지사항", "실험실", "버전 정보"],
                                    ["개인/보안", "알림", "채팅"],

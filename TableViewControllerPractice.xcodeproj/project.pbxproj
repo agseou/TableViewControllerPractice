@@ -13,8 +13,12 @@
 		A0A206162B48081100EC222D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0A206142B48081100EC222D /* Main.storyboard */; };
 		A0A206182B48081300EC222D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0A206172B48081300EC222D /* Assets.xcassets */; };
 		A0A2061B2B48081300EC222D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0A206192B48081300EC222D /* LaunchScreen.storyboard */; };
-		A0A206232B48088000EC222D /* Case2TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A206222B48088000EC222D /* Case2TableViewController.swift */; };
-		A0A206252B48088E00EC222D /* Case3TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A206242B48088E00EC222D /* Case3TableViewController.swift */; };
+		A0A206232B48088000EC222D /* SettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A206222B48088000EC222D /* SettingTableViewController.swift */; };
+		A0A206252B48088E00EC222D /* ShoppingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A206242B48088E00EC222D /* ShoppingTableViewController.swift */; };
+		E28F8F7A2BBAA471001D2D4C /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = E28F8F792BBAA471001D2D4C /* RxCocoa */; };
+		E28F8F7C2BBAA471001D2D4C /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E28F8F7B2BBAA471001D2D4C /* RxSwift */; };
+		E28F8F7F2BBAA58E001D2D4C /* ShoppingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28F8F7E2BBAA58E001D2D4C /* ShoppingViewModel.swift */; };
+		E28F8F862BBC4409001D2D4C /* SampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28F8F852BBC4409001D2D4C /* SampleViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,8 +30,10 @@
 		A0A206172B48081300EC222D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A0A2061A2B48081300EC222D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A0A2061C2B48081300EC222D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A0A206222B48088000EC222D /* Case2TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Case2TableViewController.swift; sourceTree = "<group>"; };
-		A0A206242B48088E00EC222D /* Case3TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Case3TableViewController.swift; sourceTree = "<group>"; };
+		A0A206222B48088000EC222D /* SettingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewController.swift; sourceTree = "<group>"; };
+		A0A206242B48088E00EC222D /* ShoppingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingTableViewController.swift; sourceTree = "<group>"; };
+		E28F8F7E2BBAA58E001D2D4C /* ShoppingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingViewModel.swift; sourceTree = "<group>"; };
+		E28F8F852BBC4409001D2D4C /* SampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +41,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E28F8F7C2BBAA471001D2D4C /* RxSwift in Frameworks */,
+				E28F8F7A2BBAA471001D2D4C /* RxCocoa in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,14 +71,24 @@
 				A0A2060E2B48081100EC222D /* AppDelegate.swift */,
 				A0A206102B48081100EC222D /* SceneDelegate.swift */,
 				A0A206142B48081100EC222D /* Main.storyboard */,
-				A07226362B4B22ED00A90275 /* ShoppingTableViewCell.swift */,
-				A0A206222B48088000EC222D /* Case2TableViewController.swift */,
-				A0A206242B48088E00EC222D /* Case3TableViewController.swift */,
+				A0A206222B48088000EC222D /* SettingTableViewController.swift */,
+				E28F8F852BBC4409001D2D4C /* SampleViewController.swift */,
+				E28F8F7D2BBAA57F001D2D4C /* Shopping */,
 				A0A206172B48081300EC222D /* Assets.xcassets */,
 				A0A206192B48081300EC222D /* LaunchScreen.storyboard */,
 				A0A2061C2B48081300EC222D /* Info.plist */,
 			);
 			path = TableViewControllerPractice;
+			sourceTree = "<group>";
+		};
+		E28F8F7D2BBAA57F001D2D4C /* Shopping */ = {
+			isa = PBXGroup;
+			children = (
+				A07226362B4B22ED00A90275 /* ShoppingTableViewCell.swift */,
+				A0A206242B48088E00EC222D /* ShoppingTableViewController.swift */,
+				E28F8F7E2BBAA58E001D2D4C /* ShoppingViewModel.swift */,
+			);
+			path = Shopping;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -89,6 +107,10 @@
 			dependencies = (
 			);
 			name = TableViewControllerPractice;
+			packageProductDependencies = (
+				E28F8F792BBAA471001D2D4C /* RxCocoa */,
+				E28F8F7B2BBAA471001D2D4C /* RxSwift */,
+			);
 			productName = TableViewControllerPractice;
 			productReference = A0A2060B2B48081100EC222D /* TableViewControllerPractice.app */;
 			productType = "com.apple.product-type.application";
@@ -117,6 +139,9 @@
 				Base,
 			);
 			mainGroup = A0A206022B48081100EC222D;
+			packageReferences = (
+				E28F8F782BBAA471001D2D4C /* XCRemoteSwiftPackageReference "RxSwift" */,
+			);
 			productRefGroup = A0A2060C2B48081100EC222D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -147,8 +172,10 @@
 				A07226372B4B22ED00A90275 /* ShoppingTableViewCell.swift in Sources */,
 				A0A2060F2B48081100EC222D /* AppDelegate.swift in Sources */,
 				A0A206112B48081100EC222D /* SceneDelegate.swift in Sources */,
-				A0A206232B48088000EC222D /* Case2TableViewController.swift in Sources */,
-				A0A206252B48088E00EC222D /* Case3TableViewController.swift in Sources */,
+				A0A206232B48088000EC222D /* SettingTableViewController.swift in Sources */,
+				E28F8F7F2BBAA58E001D2D4C /* ShoppingViewModel.swift in Sources */,
+				A0A206252B48088E00EC222D /* ShoppingTableViewController.swift in Sources */,
+				E28F8F862BBC4409001D2D4C /* SampleViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,6 +346,7 @@
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -351,6 +379,7 @@
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -379,6 +408,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E28F8F782BBAA471001D2D4C /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.6.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E28F8F792BBAA471001D2D4C /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E28F8F782BBAA471001D2D4C /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		E28F8F7B2BBAA471001D2D4C /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E28F8F782BBAA471001D2D4C /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A0A206032B48081100EC222D /* Project object */;
 }
