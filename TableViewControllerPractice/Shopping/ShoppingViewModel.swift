@@ -11,11 +11,18 @@ import RxCocoa
 
 class ShoppingViewModel {
     
+    // input
     let item = PublishSubject<shoppingList>()
+    
+    
+    // output
+    //let 
     
     let disposeBag = DisposeBag()
     
     init() {
+        
+        
         
     }
     

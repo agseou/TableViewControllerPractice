@@ -52,23 +52,13 @@ class ShoppingTableViewController: UITableViewController {
         addBtn.setTitleColor(.black, for: .normal)
         addBtn.layer.cornerRadius = 10
         addTextField.backgroundColor = .systemGray6
+        tableView.separatorStyle = .none
         
         // 모든 행 높이 설정
         tableView.rowHeight = 53
     }
     
     func configureBind() {
-        
-        //        addTextField.rx.text
-        //            .orEmpty
-        //            .debounce(.milliseconds(5000), scheduler: MainScheduler.instance)
-        //            .distinctUntilChanged()
-        //            .subscribe(with: self) { owner, value in
-        //                print("====\(value)====")
-        //                owner.list.append(shoppingList(label: value))
-        //                owner.items.onNext(owner.list)
-        //            }
-        //            .disposed(by: disposeBag)
         
         // 기존에 연결되어있는 IBOUTLETACTION을 끊어야 작동함!
         // 끊지않으면 unrecognized selector sent to instance... 이런 오류 발생
@@ -92,6 +82,7 @@ class ShoppingTableViewController: UITableViewController {
                 cell.shoppingBox.backgroundColor = .systemGray6
                 cell.shoppingBox.layer.cornerRadius = 15
                 cell.configure(item: element)
+                cell.selectionStyle = .none
                 
                 //IBAction -> RX로
                 cell.checkBox.rx.tap
@@ -108,8 +99,18 @@ class ShoppingTableViewController: UITableViewController {
                         cell.configure(item: element)
                     }
                     .disposed(by: cell.disposeBag)
+                
             }
             .disposed(by: disposeBag)
+        
+        tableView.rx.itemSelected
+            .withUnretained(self) // 순환 참조 해결
+            .bind { owner, indexPath in
+                let vc = SampleViewController()
+                owner.navigationController?.pushViewController(vc, animated: true)
+            }
+            .disposed(by: disposeBag)
+        
         
         // 셀 밀어서 삭제
         tableView.rx.itemDeleted
